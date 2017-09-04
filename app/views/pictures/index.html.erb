@@ -1,10 +1,20 @@
-<h1>PICSSSSSS</h1>
+<h1>Most Recent Pictures</h1>
 <%= link_to("Add New Picture", "/pictures/new") %>
+
+<h3>Most Recent Pictures</h3>
+<% @most_recent_pictures.each do |pic| %>
+<%= render 'picture', picture: pic %>
+<% end %>
 <br>
 <br>
-<% @pictures.each do |pic| %>
-  <p><%= pic.title %>  by <%= pic.artist %></p>
-  <a href='/pictures/<%= pic.id %>'><%= image_tag(pic.url) %></a>
-  <br>
-  <br>
+<h3>Older Than A Month Pictures</h3>
+<% @old_pictures.each do |pic| %>
+<%= render 'picture', picture: pic %>
+<% end %>
+<br>
+<br>
+<h3>Pictures By Year</h3>
+<p>2017</p>
+<% @pics_2017.each do |pic| %>
+<%= render 'picture', picture: pic %>
 <% end %>
