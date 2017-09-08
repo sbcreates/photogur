@@ -3,21 +3,31 @@
 <div class="newuser_form">
   <%= form_for @user do |f| %>
 
+    <div class="newuser_errors">
+    <% if @user.errors.any? %>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    <% end %>
+    </div>
+
     <div class="newuser_email">
     <%= f.label :email %>
     <%= f.text_field :email %>
     </div>
-
+<br>
     <div class="newuser_password">
     <%= f.label :password %>
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
     </div>
-
+<br>
     <div class="newuser_password_confirm">
     <%= f.label :password_confirmation %>
-    <%= f.text_field :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
     </div>
-
+<br>
     <div class="newuser_submit">
     <%= f.submit "Sign Up" %>
     </div>
