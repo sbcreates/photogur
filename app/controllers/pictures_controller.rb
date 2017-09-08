@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
     # @pictures = Picture.all
     @most_recent_pictures = Picture.most_recent_five
     @old_pictures = Picture.created_before(DateTime.current - 1.month)
-    @pics_2017 = Picture.pictures_created_in_year(2017)
+    # @pics_2017 = Picture.pictures_created_in_year(2017)
   end
 
   def show
@@ -40,7 +40,7 @@ class PicturesController < ApplicationController
     @picture.url = params[:picture][:url]
 
     if @picture.save
-      redirect_to '/pictures/#{@picture.id}'
+      redirect_to picture_path(@picture)
     else
       render :edit
     end

@@ -1,4 +1,4 @@
-<h1>Most Recent Pictures</h1>
+<h1>Pictures</h1>
 <%= link_to("Add New Picture", "/pictures/new") %>
 
 <h3>Most Recent Pictures</h3>
@@ -13,8 +13,3 @@
 <% end %>
 <br>
 <br>
-<h3>Pictures By Year</h3>
-<p>2017</p>
-<% @pics_2017.each do |pic| %>
-<%= render 'picture', picture: pic %>
-<% end %>
