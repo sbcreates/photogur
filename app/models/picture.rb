@@ -1,7 +1,7 @@
 class Picture < ApplicationRecord
 
   # validates artist and url input is present
-  validates :artist, :url, presence: true #{ message: "artist must be given"}
+  validates :artist, :url, :user_id, presence: true #{ message: "artist must be given"}
   # validates title length is between 3-20 char long
   validates :title, length: { in: 3..20 }
   # validates url is unique
