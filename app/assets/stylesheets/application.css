@@ -12,6 +12,10 @@ body {
   padding-right: 1em;
 }
 
+.user_welcome {
+  font-weight: bold;
+}
+
 /*navigation list item*/
 .nav li {
   display: inline-block;
