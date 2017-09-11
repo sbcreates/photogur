@@ -1,10 +1,32 @@
-body {
+/*----------------*/
+/* BASE STYLES */
+/*----------------*/
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/*NAVIGATION*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* CLEARFIX - for ensuring floated elements are contained in their parent */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*----------------*/
+/*NAVIGATION STYLES*/
+/*----------------*/
+
 /*navigation list*/
 .nav {
   list-style: none;
@@ -13,7 +35,7 @@ body {
 }
 
 .user_welcome {
-  font-weight: bold;
+ display: none;
 }
 
 /*navigation list item*/
@@ -26,3 +48,14 @@ body {
 .nav a {
   text-decoration: none;
 }
+
+h1 {
+  text-align: center;
+}
+
+/*--------------------------*/
+/*RESPONSIVE DESIGN CODE
+BREAKPOINT 768PX*/
+/*--------------------------*/
+
+@media (min-width:768px)

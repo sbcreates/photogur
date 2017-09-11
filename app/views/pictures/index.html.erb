@@ -1,15 +1,16 @@
-<h1 class="pictures">Pictures</h1>
-<%= link_to("Add New Picture", "/pictures/new") %>
+<h1 class="index_header">Pictures</h1>
 
-<h3>Most Recent Pictures</h3>
-<% @most_recent_pictures.each do |pic| %>
-<%= render 'picture', picture: pic %>
-<% end %>
-<br>
-<br>
+  <%= link_to("Add New Picture", "/pictures/new") %>
+  <br>
+  <br>
+  <div class="index_pictures">
+    <% @most_recent_pictures.each do |pic| %>
+      <%= render 'picture', picture: pic %>
+    <% end %>
+  </div>
+  <br>
+  <br>
 <!-- <h3>Older Than A Month Pictures</h3>
 <% @old_pictures.each do |pic| %>
 <%= render 'picture', picture: pic %>
 <% end %> -->
-<br>
-<br>
