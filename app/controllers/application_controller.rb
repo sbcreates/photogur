@@ -16,4 +16,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def ensure_user_owns_picture
+    unless current_user == @picture.user
+      flash[:alert] = "Please log in"
+      redirect_to new_sessions_path
+    end
+  end
+
 end
