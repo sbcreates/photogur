@@ -5,6 +5,8 @@ class PicturesController < ApplicationController
   # if you try to modify or remove a picture that you didn't create, you should be redirected to the login page.
   before_action :ensure_user_owns_picture, only: [:edit, :update, :destroy]
 
+  belongs_to :user
+
   def index
     # @pictures = Picture.all
     @most_recent_pictures = Picture.most_recent_five
@@ -67,6 +69,15 @@ class PicturesController < ApplicationController
 
   def load_picture
     @picture = Picture.find(params[:id])
+  end
+
+  Now we can make use of @picture in our ensure_user_owns_picture method:
+
+  def ensure_user_owns_picture
+    unless current_user == @picture.user
+      flash[:alert] = "Please log in"
+      redirect_to new_session_url
+    end
   end
 
 end
