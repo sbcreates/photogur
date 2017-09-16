@@ -5,13 +5,13 @@
 
   <title>Photogur</title>
   <%= stylesheet_link_tag 'application' %>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
   <body>
 
     <nav>
-      <div>
+      <div class="menu-bar">
         <ul class="menu-links left">
           <li><%= link_to "Home", root_url, class: "menu-left" %></li>
           <% if current_user %>
