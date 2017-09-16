@@ -1,16 +1,12 @@
-<h1 class="text-center">Pictures</h1>
+<h1>Pictures</h1>
 
   <%= link_to("Add New Picture", "/pictures/new") %>
   <br>
   <br>
-  <div class="index_pictures">
+  <div>
     <% @most_recent_pictures.each do |pic| %>
       <%= render 'picture', picture: pic %>
     <% end %>
   </div>
   <br>
   <br>
-<!-- <h3>Older Than A Month Pictures</h3>
-<% @old_pictures.each do |pic| %>
-<%= render 'picture', picture: pic %>
-<% end %> -->

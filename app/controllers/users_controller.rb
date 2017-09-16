@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  has_many :pictures
-
   def new
     @user = User.new
   end

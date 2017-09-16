@@ -1,7 +1,7 @@
 
 
-<h1 class="text-center"><%= @picture.title %>
-  <small> by <%= @picture.artist %> </small>
+<h1><%= @picture.title %>
+  <span class="artist-name"> by <%= @picture.artist %> </span>
 </h1>
 <%= image_tag(@picture.url) %>
 <br>
