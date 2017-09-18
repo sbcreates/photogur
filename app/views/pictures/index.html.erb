@@ -3,12 +3,9 @@
   <% if current_user %>
   <%= link_to("Add New Picture", "/pictures/new") %>
   <% end %>
-  <br>
-  <br>
+
   <div>
     <% @most_recent_pictures.each do |pic| %>
       <%= render 'picture', picture: pic %>
     <% end %>
   </div>
-  <br>
-  <br>

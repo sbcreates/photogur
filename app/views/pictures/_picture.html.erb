@@ -1,2 +1,5 @@
-<p><%= picture.title %>  by <%= picture.artist %></p>
-<a href='/pictures/<%= picture.id %>'><%= image_tag(picture.url) %></a>
+<div class="artwork-info">
+  <h3 class="artwork-title"><%= picture.title %><h3>
+  <p class="artwork-artist">by <%= picture.artist %></p>
+</div>
+  <a class="artwork-image" href='/pictures/<%= picture.id %>'><%= image_tag(picture.url) %></a>

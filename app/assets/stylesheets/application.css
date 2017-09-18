@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
 }
 
 *,
@@ -19,7 +20,6 @@ body {
 
 /*ELEMENT STYLING*/
 
-/*all navigation links*/
 li {
   list-style: none;
   display: inline;
@@ -45,7 +45,7 @@ img {
 /*CLASS STYLING*/
 .menu-bar {
   position: fixed;
-  background-color: rgba(150,150,150,0.5);
+  background-color: rgba(180,180,180,0.75);
   border-bottom: 1px solid gray;
   width: 100%;
   overflow: hidden;
@@ -53,25 +53,29 @@ img {
 }
 
 .menu-links.right {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  padding-top: 3px;
   float: right;
   border-bottom: none;
+  font-size: 14px;
 }
 
 .menu-links.left {
   padding: 0;
   margin: 0;
+  font-size: 18px;
+  float: left;
 }
 
 .menu-left,
-.menu-right {
+.menu-right,
+.menu-link-divide {
   color: white;
-  padding: 0 10px;
+  padding: 1px;
 }
 
 .menu-left:hover,
 .menu-right:hover {
   color: darkgray;
-  padding: 0 10px;
 }

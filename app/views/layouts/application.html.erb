@@ -5,6 +5,9 @@
 
   <title>Photogur</title>
   <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
@@ -14,12 +17,14 @@
       <div class="menu-bar">
         <ul class="menu-links left">
           <li><%= link_to "Home", root_url, class: "menu-left" %></li>
-          <% if current_user %>
-          <li><%= link_to "Log Out", sessions_path, method: :delete, class: "menu-left" %></li>
         </ul>
           <% else %>
         <ul class="menu-links right">
-            <li><%= link_to "Log In", new_sessions_path, class: "menu-right" %></li>
+          <% if current_user %>
+            <li><%= link_to "Logout", :logout, method: :delete, class: "menu-right" %></li>
+          <% else %>
+            <li><%= link_to "Login", :login, class: "menu-right" %></li>
+            <li class ="menu-link-divide"> / </li>
             <li><%= link_to "Sign Up", new_users_path, class: "menu-right" %></li>
           <% end %>
         </ul>
